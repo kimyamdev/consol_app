@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Transactions</title>
+</head>
+<body>
+    <h1>Historical Transactions</h1>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Symbol</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Type</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction.date }}</td>
+            <td>{{ transaction.symbol }}</td>
+            <td>{{ transaction.quantity }}</td>
+            <td>{{ transaction.price }}</td>
+            <td>{{ transaction.type }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
